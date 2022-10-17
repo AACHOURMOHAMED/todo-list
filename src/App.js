@@ -13,8 +13,8 @@ const App = () => {
     {
       id: 3,
       title: 'Lean JavaScript',
-    }
-  ]
+    },
+  ];
   return (
     <>
       <h1>todolist</h1>
@@ -28,7 +28,7 @@ const App = () => {
         }
       </ul>
     </>
-  )
-}
+  );
+};
 
 export default App;
