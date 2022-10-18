@@ -1,72 +1,94 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Project Name: React To-Do List
 
-# Project Name
+> Description of the project: This is a to-do list that is primarily created using Reactjs. The list is an array of objects that allows the user to fill in the form section with the activity, date and time. There is also the option of checking completed tasks and removing them from the list. All the information is stored in the local storage.  
 
-> Description the project.
-
+## Live Preview
+> Coming soon
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- React
+- JavaScript
+- CSS
 
-## Live Demo (if available)
+## Additional Tools
 
-[Live Demo Link](https://livedemo.com)
+- Stylelint
+- Eslint
+- babel
+- Jest
+
+## `Getting Started`
+
+To get a local copy of this project:
+
+Clone this repository or download the Zip folder:
+```
+https://github.com/AACHOURMOHAMED/react-todo-list.git
+```
+
+To get started, In the project directory, you can run:
+```
+yarn install OR npm install
+```
+run react app and open in browser:
+```
+yarn start OR npm start
+```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+If you encounter an issue related to eslint or webpack version conflict run:
+```
+yarn audit fix --force OR npm audit fix --force
+```
+
+## `Tests`
+To check development tests run:
+```
+yarn test OR npm run test
+```
+Launches the test runner in the interactive watch mode.
 
 
-## Getting Started
+### To track linter errors locally follow these steps:  
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+Track CSS linter errors run:
+```
+npx stylelint "**/*.{css,scss}"
+```
+Track JavaScript linter errors run:
+```
+npx eslint .
+```
+
+## `Deployement`
+```
+yarn build OR npm build
+```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
 
-To get a local copy up and running follow these simple example steps.
+👤 **AshourMohamed**
 
-### Prerequisites
+- GitHub: [@githubhandle](https://github.com/AACHOURMOHAMED)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/mohamed-aachour-25405b215)
 
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!  
+Feel free to check the [issues page](https://github.com/AACHOURMOHAMED/react-todo-list/issues).
 
-Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
