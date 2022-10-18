@@ -1,3 +1,5 @@
+import TodoListItem from './TodoListItem';
+
 const TodoList = () => {
   const data = [
     {
@@ -14,15 +16,17 @@ const TodoList = () => {
     },
   ];
   return (
-    <ul>
+    <>
       {
-          data.map((index) => (
-            <li key={index.id}>
-              {index.title}
-            </li>
-          ))
-        }
-    </ul>
+    data.map((index) => (
+      <TodoListItem
+        key={index.id}
+        id={index.id}
+        todo={index.title}
+      />
+    ))
+    }
+    </>
   );
 };
 
