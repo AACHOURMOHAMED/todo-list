@@ -1,34 +1,13 @@
 import React from 'react';
+import AddTodoForm from './AddTodoForm';
+import TodoList from './TodoList';
 
-const App = () => {
-  const data = [
-    {
-      id: 1,
-      title: 'Lean next js',
-    },
-    {
-      id: 2,
-      title: 'Lean react js',
-    },
-    {
-      id: 3,
-      title: 'Lean JavaScript',
-    },
-  ];
-  return (
-    <>
-      <h1>todolist</h1>
-      <ul>
-        {
-          data.map((index) => (
-            <li key={index.id}>
-              {index.title}
-            </li>
-          ))
-        }
-      </ul>
-    </>
-  );
-};
+const App = () => (
+  <>
+    <h1>todolist</h1>
+    <AddTodoForm />
+    <TodoList />
+  </>
+);
 
 export default App;
