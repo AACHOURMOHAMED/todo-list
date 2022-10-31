@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
-const AddTodoForm = () => {
+const AddTodoForm = (props) => {
+  const [todo, setTodo] = useState('');
   const handleTitleChange = (e) => {
-    const todoTitle = e.target.value;
-    console.log(todoTitle);
+    setTodo(e.target.value);
   };
 
   const handleAddTodo = (e) => {
     e.preventDefault();
-    console.log('h');
+    console.log(todo);
+    const { onAddTodo } = props;
+    onAddTodo(todo);
+    setTodo('');
   };
   return (
     <form onSubmit={handleAddTodo}>
@@ -18,6 +22,7 @@ const AddTodoForm = () => {
           type="text"
           id="todoTitle"
           name="title"
+          value={todo}
           onChange={handleTitleChange}
         />
       </label>
@@ -27,3 +32,8 @@ const AddTodoForm = () => {
 };
 
 export default AddTodoForm;
+
+// Add prop validattion
+AddTodoForm.propTypes = {
+  onAddTodo: PropTypes.func.isRequired,
+};
