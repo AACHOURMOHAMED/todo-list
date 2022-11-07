@@ -1,17 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const AddTodoForm = (props) => {
-  const [todo, setTodo] = useState('');
+  const [todo, setTodo] = React.useState('');
   const handleTitleChange = (e) => {
     setTodo(e.target.value);
   };
 
   const handleAddTodo = (e) => {
     e.preventDefault();
-    console.log(todo);
     const { onAddTodo } = props;
-    onAddTodo(todo);
+    onAddTodo({
+      id: Math.floor(Math.random() * 1000),
+      title: todo,
+      completed: false,
+    });
     setTodo('');
   };
   return (
