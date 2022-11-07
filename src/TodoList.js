@@ -1,28 +1,19 @@
+import PropTypes from 'prop-types';
 import TodoListItem from './TodoListItem';
 
-const TodoList = () => {
-  const data = [
-    {
-      id: 1,
-      title: 'Lean next js',
-    },
-    {
-      id: 2,
-      title: 'Lean react js',
-    },
-    {
-      id: 3,
-      title: 'Lean JavaScript',
-    },
-  ];
+const TodoList = (props) => {
+  const { todos, handleToggleTodo, removeTodo } = props;
   return (
     <>
       {
-    data.map((index) => (
+    todos.map((index) => (
       <TodoListItem
         key={index.id}
         id={index.id}
         todo={index.title}
+        completed={index.completed}
+        handleToggleTodo={handleToggleTodo}
+        removeTodo={removeTodo}
       />
     ))
     }
@@ -31,3 +22,13 @@ const TodoList = () => {
 };
 
 export default TodoList;
+
+// Add prop validattion
+TodoList.propTypes = {
+  todos: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+  })).isRequired,
+  handleToggleTodo: PropTypes.func.isRequired,
+  removeTodo: PropTypes.func.isRequired,
+};
