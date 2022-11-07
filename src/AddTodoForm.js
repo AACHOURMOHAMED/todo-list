@@ -10,11 +10,13 @@ const AddTodoForm = (props) => {
   const handleAddTodo = (e) => {
     e.preventDefault();
     const { onAddTodo } = props;
-    onAddTodo({
-      id: Math.floor(Math.random() * 1000),
-      title: todo,
-      completed: false,
-    });
+    if (todo !== '') {
+      onAddTodo({
+        id: Math.floor(Math.random() * 1000),
+        title: todo,
+        completed: false,
+      });
+    }
     setTodo('');
   };
   return (

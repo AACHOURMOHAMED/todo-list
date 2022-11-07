@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const TodoListItem = (props) => {
   const {
-    id, todo, completed, handleToggleTodo,
+    id, todo, completed, handleToggleTodo, removeTodo,
   } = props;
   return (
     <li>
@@ -17,6 +17,7 @@ const TodoListItem = (props) => {
         />
         {todo}
       </label>
+      <button type="button" onClick={() => removeTodo(id)}>Remove</button>
     </li>
   );
 };
@@ -28,4 +29,5 @@ TodoListItem.propTypes = {
   todo: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
   handleToggleTodo: PropTypes.func.isRequired,
+  removeTodo: PropTypes.func.isRequired,
 };

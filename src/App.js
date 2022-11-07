@@ -16,8 +16,6 @@ const App = () => {
   useEffect(() => {
     // save on localstorge
     localStorage.setItem('savedTodoList', JSON.stringify(todos));
-
-    // load from localstorage
   }, [todos]);
 
   const handleToggleTodo = (id) => {
@@ -32,11 +30,15 @@ const App = () => {
     }));
   };
 
+  const removeTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
   return (
     <>
       <h1>todolist</h1>
       <AddTodoForm onAddTodo={handleAddTodo} />
-      <TodoList todos={todos} handleToggleTodo={handleToggleTodo} />
+      <TodoList todos={todos} handleToggleTodo={handleToggleTodo} removeTodo={removeTodo} />
     </>
   );
 };
