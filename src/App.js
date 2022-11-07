@@ -6,14 +6,26 @@ const App = () => {
   const [todos, setTodos] = React.useState([]);
 
   const handleAddTodo = (todo) => {
-    setTodos((prevTodos) => [...prevTodos, todo]);
+    setTodos([...todos, todo]);
   };
+
+  const handleToggleTodo = (id) => {
+    setTodos(todos.map((todo) => {
+      if (todo.id === id) {
+        return {
+          ...todo,
+          completed: !todo.completed,
+        };
+      }
+      return todo;
+    }));
+  };
+
   return (
     <>
       <h1>todolist</h1>
       <AddTodoForm onAddTodo={handleAddTodo} />
-      <p>{todos}</p>
-      <TodoList />
+      <TodoList todos={todos} handleToggleTodo={handleToggleTodo} />
     </>
   );
 };
